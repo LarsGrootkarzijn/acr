@@ -17,6 +17,8 @@ if [ -f target ]; then
 fi
 
 sbuild --chroot-mode=unshare \
+       --arch=$1 \
        --enable-network \
        --no-clean-source \
+       --verbose \
        $DIST_ARG
